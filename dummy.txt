@@ -1,3 +1,7 @@
+git add . - adiciona todos 
+git commit -m - faz commit
+
+
 fabbel@ACTPT1086:~/Rails/personal/code_academy$ git commit
 
 *** Please tell me who you are.
