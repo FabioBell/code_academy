@@ -1,5 +1,8 @@
 <ul class="nav nav-tabs">
-    <li role="presentation" class=""><a href="<%= root_path%>">Home</a></li>
-    <li role="presentation" class=""><a href="<%= about_us_path %>">About us</a></li>
-    <li role="presentation" class=""><a href="<%= applications_path %>">Portfolio</a></li>
+    <li class="<%="active" if @active_tab == :welcome %>"><a href="<%= root_path%>">Home</a></li>
+    <li class="<%="active" if @active_tab == :about_us %>"><a href="<%= about_us_path%>">About us</a></li>
+    <li class="<%="active" if @active_tab == :applications %>"><a href="<%= applications_path%>">Portfolio</a></li>
+
+
   </ul>
+  
