@@ -22,9 +22,9 @@ class ApplicationsController < ApplicationController
 		@active_tab = :applications
 		@new_application = Application.new(application_params)
 			if @new_application.save 
-	    		redirect_to "/applications"
+	    		redirect_to applications_path
 	  		else 
-	    		render "new" 
+	    		render new_application_path 
 	  		end 
   	end 
 

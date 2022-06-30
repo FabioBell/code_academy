@@ -1,12 +1,26 @@
 <div class="list">  
-<%= form_for(@new_application) do |f| %>
-  <ul class="list-group ">
-    <li class="list-group-item " border-0 size=100 ><p>Insert the App Name:<p><%= f.text_field :name,:required => 'required', :placeholder => "Ex: App Name.", :input_html => {:rows => 100}, :maxlength => 100%></li>
-    <li class="list-group-item"><p>Insert the App Description:<p><%= f.text_area :description, :placeholder => "Ex: This app assumes the function of a ....",:rows=>10, :cols=>60, :maxlength => 100%></li>
-    <li class="list-group-item"><p>Starting Date of Development:</p> <%= f.date_field :start_date, :required => 'true', value: f.object.try(:strftime,"%d/%m/%Y") %></li>
-    <li class="list-group-item"><p>Development end Date: </p><%= f.date_field :finish_date%></li>
-  </ul>
-  <%= f.submit "Save New App", class: "btn btn-success"%> 
-<% end %>
+    <%= form_for(@new_application) do |f| %>
+        <ul class="list-group ">
+            <div>
+                <p>Insert the App Name:</p>
+                <%= f.text_field :name,:required => 'required', :placeholder => "Ex: App Name."%>
+            </div>
+            <div>
+                <p>Insert the App Description:</p>
+                <%= f.text_area :description, :placeholder => "Ex: This app assumes the function of a ...."%>
+            </div>
+            <div>
+                <p>Starting Date of Development:</p>
+                <%= f.date_field :start_date, :required => 'true', value: f.object.try(:strftime,"%d/%m/%Y") %>
+            </div>
+            <div>
+                <p>Development end Date: </p>
+                <%= f.date_field :finish_date%>
+            </div>
+        </ul>
+        <div>
+            <%= f.submit "Save New App", class: "btn btn-success"%> 
+        </div>
+    <% end %>
 
 </div>
