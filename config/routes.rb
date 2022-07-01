@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "contacts" => "pages#contacts"
   
   
+  
   resources :applications
 
   # The priority is based upon order of creation: first created -> highest priority.
